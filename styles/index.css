@@ -1,0 +1,113 @@
+li{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+tbody tr:nth-of-type(odd){
+    background-color: rgb(216, 212, 212);
+}
+#containerLeft{
+    display: inline-block;
+    width: 45%;
+    margin-top: 5px;
+    text-align: center;
+    border: 2px solid green;
+}
+
+#inserir{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+#funcionario{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(207, 204, 204);
+}
+#funcionario::placeholder{
+    color: white;
+    font-weight: 800;
+
+}
+
+#listaDisponiveis{
+    margin-left: 10px;
+}
+
+#emServico{
+    margin-top: 5px;
+    margin-right: 20px;
+    border: 2px solid black;
+    width: 45%;
+    min-height: 35px;
+    float: right;
+    text-align: center;
+
+}
+
+th{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+td{
+    border: 1px solid black;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+#nomeFunci{
+    min-width: 20px;
+}
+
+.excluir{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.excluir:hover{
+    background-color: rgb(255, 50, 100)
+
+}
+
+.chamar{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#chamar:hover{
+    background-color:  rgb(5, 128, 100);
+}
+
+@media screen and (max-width: 600px) {
+    #containerLeft{
+        display: block;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+    #listaDisponiveis{
+        margin:auto;
+        text-align: center;
+    }
+
+    #emServico{
+        text-align: center;
+        float: none;
+        margin: auto;
+        width: 100%;
+    }
+}

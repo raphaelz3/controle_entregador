@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/index.css"  rel="stylesheet" type="text/css">
+    <link href="./styles/menu.css" rel="stylesheet" type="text/css">
+
+    <title>Fila de Espera</title>
+</head>
+<body>
+    <nav>
+        <div id="menuContainer">
+        </div>
+    </nav>
+    <!--Lado direito/ Inserir e lista de disponiveis-->
+    <div id="inserir">
+        Adicionar a Fila:
+        <input type="text"  id="funcionario" placeholder="Nome" required>
+        <input type="submit" onclick="adicionar()" value="Adicionar">
+    </div>
+    <div id="containerLeft">
+        <div id="listaDisponiveis">
+            <h3>Funcionarios Disponiveis:</h3>
+
+            <table >
+                <thead>
+                    <tr>
+                        <th>Nome </th>
+                        <th>Hora </th>
+                        <th>chamar </th>
+                        <th>excluir </th>
+                    </tr>
+                </thead>
+
+                <tbody id="filaEspera" name="filaEspera">
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th colspan="4"><button class="excluir" onclick="limparFila()">Limpar Fila</button></th>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </div>
+    </div>
+    <!--Lista de funcionarios em serviço-->
+    <div id="emServico">
+        <h3>Funcionários em serviço: </h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Local</th>
+                </tr>
+            </thead>
+            <tbody id="filaServico">
+
+            </tbody>
+        </table>
+
+    </div>
+    <script src="./scripts/menu.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

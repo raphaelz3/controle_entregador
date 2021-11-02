@@ -1,0 +1,23 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#navMenu{
+    list-style: none;
+    background-color: black;
+}
+.navLi{
+    display: inline-block;
+    padding: 4px;
+    border: 1px solid black;
+}
+.navLi:hover{
+    background-color: #333333;
+    color: black;
+}
+.navLink{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}

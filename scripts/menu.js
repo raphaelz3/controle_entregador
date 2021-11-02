@@ -1,0 +1,2 @@
+let menu = document.getElementById('menuContainer')
+menu.innerHTML='<ul id="navMenu"><li class="navLi"><a class="navLink" href="./index.html">Home</a></li><!--<li class="navLi"><a class="navLink" href="./novo.html">Novo</a></li><li class="navLi"><a class="navLink" href="./cadastro.html">Cadastro</a></li></ul>-->'
