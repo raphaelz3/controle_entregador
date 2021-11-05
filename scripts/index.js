@@ -73,13 +73,17 @@ function contadordeposicao(idposicao){
 
 //abre coluna para inserir local com opções de salvar ou cancelar. Cancelar faz o reload da tela
 function chamar(idchamada){
-
+    document.body.style="overflow: hidden;";
+    let exibirJanela = document.getElementById("containerChamar")
+    exibirJanela.style="display: flex;"
     let chamado = document.getElementById(idchamada);
-    chamado.style="background-color: rgb(179, 231, 149)";
+    chamado.style="background-color: rgba(227, 246, 224, 0.9)";
+    let posicaochamada = contadordeposicao(idchamada);
+    let nomeChamado = Disponiveis[posicaochamada].nome;
 
     let idchamadamod = idchamada + 1;
-    document.getElementById(idchamada).innerHTML += `<td id="${idchamada}td">` + 'Insira o endereço: '+`<input id="${idchamadamod}" type="text">` + `<button id="salvarChamarLocal" class="chamar" onclick="salvarChamar(${idchamadamod})">` + 'salvar</button>' + `<button id="cancelarChamarLocal" class="excluir" onclick="window.
-    location.reload()">`+ 'cancelar</button></td>';
+    document.getElementById("dadosChamar").innerHTML = `<p>Funcionario: ${nomeChamado}</p>` + '<p>Insira o endereço: </p>'+`<input id="${idchamadamod}" class="inputInserirDados" type="text">` + '<br>' + `<button id="salvarChamarLocal" class="chamar" onclick="salvarChamar(${idchamadamod})">` + 'salvar</button>' + `<button id="cancelarChamarLocal" class="excluir" onclick="window.
+    location.reload()">`+ 'cancelar</button>';
 }
 
 //Salva as informações inseridas e recupera o nome para armazenar na coluna de funcionarios em serviço
@@ -94,6 +98,9 @@ function salvarChamar(salCham){
     //deletar(salCham - 1)
     document.getElementById('filaServico').innerHTML += `<tr>` + `<td>${nomeChamado}</td>`+ `<td>${local}</td>` + '<tr>'
     deletar(salCham - 1);
+    document.body.style="overflow: auto;";
+    let exibirJanela = document.getElementById("containerChamar")
+    exibirJanela.style="display: none;"
 
 }
 

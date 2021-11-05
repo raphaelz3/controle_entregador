@@ -10,6 +10,10 @@
     <title>Fila de Espera</title>
 </head>
 <body>
+    <div id="containerChamar">
+        <div id="dadosChamar">
+        </div>
+    </div>
     <nav>
         <div id="menuContainer">
         </div>
@@ -17,9 +21,11 @@
     <!--Lado direito/ Inserir e lista de disponiveis-->
     <div id="inserir">
         Adicionar a Fila:
-        <input type="text"  id="funcionario" placeholder="Nome" required>
+        <input type="text"  class="inputInserirDados" placeholder="Nome" required>
         <input type="submit" onclick="adicionar()" value="Adicionar">
     </div>
+
+<div>
     <div id="containerLeft">
         <div id="listaDisponiveis">
             <h3>Funcionarios Disponiveis:</h3>
@@ -46,6 +52,7 @@
             </table>
         </div>
     </div>
+
     <!--Lista de funcionarios em serviço-->
     <div id="emServico">
         <h3>Funcionários em serviço: </h3>
@@ -62,6 +69,8 @@
         </table>
 
     </div>
+</div>
+
     <script src="./scripts/menu.js"></script>
     <script src="scripts/index.js"></script>
 </body>
