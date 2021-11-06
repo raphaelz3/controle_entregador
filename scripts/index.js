@@ -82,8 +82,7 @@ function chamar(idchamada){
     let nomeChamado = Disponiveis[posicaochamada].nome;
 
     let idchamadamod = idchamada + 1;
-    document.getElementById("dadosChamar").innerHTML = `<p>Funcionario: ${nomeChamado}</p>` + '<p>Insira o endereço: </p>'+`<input id="${idchamadamod}" class="inputInserirDados" type="text">` + '<br>' + `<button id="salvarChamarLocal" class="chamar" onclick="salvarChamar(${idchamadamod})">` + 'salvar</button>' + `<button id="cancelarChamarLocal" class="excluir" onclick="window.
-    location.reload()">`+ 'cancelar</button>';
+    document.getElementById("dadosChamar").innerHTML = `<p>Funcionario: ${nomeChamado}</p>` + '<p>Insira o endereço: </p>'+`<input id="${idchamadamod}" class="inputInserirDados" type="text">` + '<br>' + `<button id="salvarChamarLocal" class="chamar" onclick="salvarChamar(${idchamadamod})">` + 'salvar</button>' + `<button id="cancelarChamarLocal" class="excluir" onclick="cancelarChamar(${idchamadamod})"">`+ 'cancelar</button>';
 }
 
 //Salva as informações inseridas e recupera o nome para armazenar na coluna de funcionarios em serviço
@@ -101,7 +100,12 @@ function salvarChamar(salCham){
     document.body.style="overflow: auto;";
     let exibirJanela = document.getElementById("containerChamar")
     exibirJanela.style="display: none;"
+}
 
+function cancelarChamar(cancCham){
+    document.body.style="overflow: auto;";
+    let exibirJanela = document.getElementById("containerChamar")
+    exibirJanela.style="display: none;"
 }
 
 //remove a linha selecionada da tabela e do local storage
