@@ -4,6 +4,10 @@ li{
     margin-right: 5px;
 }
 
+table{
+    margin: auto;
+}
+
 body{
     font-family: sans-serif, Arial, Helvetica, 'lucida Sans';
     overflow: auto;
