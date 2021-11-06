@@ -21,7 +21,7 @@
     <!--Lado direito/ Inserir e lista de disponiveis-->
     <div id="inserir">
         Adicionar a Fila:
-        <input type="text"  class="inputInserirDados" placeholder="Nome" required>
+        <input type="text"  id="funcionario" class="inputInserirDados" placeholder="Nome" required>
         <input type="submit" onclick="adicionar()" value="Adicionar">
     </div>
 
@@ -33,8 +33,8 @@
             <table >
                 <thead>
                     <tr>
-                        <th>Nome </th>
-                        <th>Hora </th>
+                        <th style="width: 200px;">Nome </th>
+                        <th style="width: 110px;">Hora </th>
                         <th>chamar </th>
                         <th>excluir </th>
                     </tr>
@@ -59,8 +59,10 @@
         <table>
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Local</th>
+                    <th style="width: 200px;">Nome</th>
+                    <th >Local</th>
+                    <th>Fila</th>
+                    <th>Excluir</th>
                 </tr>
             </thead>
             <tbody id="filaServico">
