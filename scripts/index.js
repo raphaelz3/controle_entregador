@@ -55,7 +55,7 @@ function listar(){
     document.getElementById("filaEspera").innerHTML = '';
 
     for(i = 0; i < Disponiveis.length; i++){
-        document.getElementById("filaEspera").innerHTML +=  `<tr id ="${Disponiveis[i].id}">` + '<td id="nomeFunci">' + Disponiveis[i].nome + '</td>' + '<td id="horaChegada">' + Disponiveis[i].hora + '</td>' + '<td>' + `<button class="chamar" onclick="chamar(${Disponiveis[i].id})">chamar</button>` +'</td>' + '<td>' +`<button nome="excluir" class="excluir" onclick="deletar(${Disponiveis[i].id})">excluir</button>` + "</td>" +'</tr>';
+        document.getElementById("filaEspera").innerHTML +=  `<tr id ="${Disponiveis[i].id}">` + '<td id="nomeFunci">' + Disponiveis[i].nome + '</td>' + '<td id="horaChegada">' + Disponiveis[i].hora + '</td>' + '<td>' + `<button class="chamar" onclick="chamar(${Disponiveis[i].id})">Chamar</button>` +'</td>' + '<td>' +`<button nome="excluir" class="excluir" onclick="deletar(${Disponiveis[i].id})">Excluir</button>` + "</td>" +'</tr>';
     }
 }
 
@@ -82,7 +82,7 @@ function chamar(idchamada){
     let nomeChamado = Disponiveis[posicaochamada].nome;
 
     let idchamadamod = idchamada + 1;
-    document.getElementById("dadosChamar").innerHTML = `<p>Funcionario: ${nomeChamado}</p>` + '<p>Insira o endereço: </p>'+`<input id="${idchamadamod}" class="inputInserirDados" type="text">` + '<br>' + `<button id="salvarChamarLocal" class="chamar" onclick="salvarChamar(${idchamadamod})">` + 'salvar</button>' + `<button id="cancelarChamarLocal" class="excluir" onclick="cancelarChamar(${idchamadamod})"">`+ 'cancelar</button>';
+    document.getElementById("dadosChamar").innerHTML = `<p>Funcionario: ${nomeChamado}</p>` + '<p>Insira o endereço: </p>'+`<input id="${idchamadamod}" class="inputInserirDados" type="text">` + '<br>' + `<button id="salvarChamarLocal" class="chamar" onclick="salvarChamar(${idchamadamod})">` + 'Salvar</button>' + `<button id="cancelarChamarLocal" class="excluir" onclick="cancelarChamar(${idchamadamod})"">`+ 'Cancelar</button>';
 }
 
 //Salva as informações inseridas e recupera o nome para armazenar na coluna de funcionarios em serviço
@@ -95,7 +95,7 @@ function salvarChamar(salCham){
     console.log(local);
     console.log(nomeChamado);
     //deletar(salCham - 1)
-    document.getElementById('filaServico').innerHTML += `<tr>` + `<td>${nomeChamado}</td>`+ `<td>${local}</td>` + '<tr>'
+    document.getElementById('filaServico').innerHTML += `<tr>` + `<td>${nomeChamado}</td>`+ `<td>${local}</td>` + '<td>' + `<button style="width:58px;" class="chamar" onclick="">Fila</button>` +'</td>' + '<td>' +`<button nome="Excluir" class="excluir" onclick="deletar()">Excluir</button>` + "</td>" +'</tr>';
     deletar(salCham - 1);
     document.body.style="overflow: auto;";
     let exibirJanela = document.getElementById("containerChamar")
