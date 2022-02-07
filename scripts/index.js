@@ -76,13 +76,10 @@ function chamar(idchamada){
     document.body.style="overflow: hidden;";
     let exibirJanela = document.getElementById("containerChamar")
     exibirJanela.style="display: flex;"
-    let chamado = document.getElementById(idchamada);
-    chamado.style="background-color: rgba(227, 246, 224, 0.9)";
     let posicaochamada = contadordeposicao(idchamada);
     let nomeChamado = Disponiveis[posicaochamada].nome;
-
     let idchamadamod = idchamada + 1;
-    document.getElementById("dadosChamar").innerHTML = `<p>Funcionario: ${nomeChamado}</p>` + '<p>Insira o endereço: </p>'+`<input id="${idchamadamod}" class="inputInserirDados" type="text">` + '<br>' + `<button id="salvarChamarLocal" class="chamar" onclick="salvarChamar(${idchamadamod})">` + 'Salvar</button>' + `<button id="cancelarChamarLocal" class="excluir" onclick="cancelarChamar(${idchamadamod})"">`+ 'Cancelar</button>';
+    document.getElementById("dadosChamar").innerHTML = `<p>Funcionario: ${nomeChamado}</p>` + '<p>Insira o CEP: </p>'+`<input id="${idchamadamod}" class="inputInserirDados" type="text">` + '<br>' + `<button id="salvarChamarLocal" class="chamar" onclick="salvarChamar(${idchamadamod})">` + 'Salvar</button>' + `<button id="cancelarChamarLocal" class="excluir" onclick="cancelarChamar(${idchamadamod})"">`+ 'Cancelar</button>';
 }
 
 //Salva as informações inseridas e recupera o nome para armazenar na coluna de funcionarios em serviço
@@ -92,10 +89,8 @@ function salvarChamar(salCham){
     let posicaochamada = contadordeposicao(salCham - 1);
     let nomeChamado = Disponiveis[posicaochamada].nome;
 
-    console.log(local);
-    console.log(nomeChamado);
     //deletar(salCham - 1)
-    document.getElementById('filaServico').innerHTML += `<tr>` + `<td>${nomeChamado}</td>`+ `<td>${local}</td>` + '<td>' + `<button style="width:58px;" class="chamar" onclick="">Fila</button>` +'</td>' + '<td>' +`<button nome="Excluir" class="excluir" onclick="deletar()">Excluir</button>` + "</td>" +'</tr>';
+    document.getElementById('filaServico').innerHTML += `<tr id="${salCham}">` + `<td>${nomeChamado}</td>`+ `<td>${local}</td>` + '<td>' + `<button style="width:58px;" class="chamar" onclick="">Fila</button>` +'</td>' + '<td>' +`<button nome="Excluir" class="excluir" onclick="deletar(${salCham})">Excluir</button>` + "</td>" +'</tr>';
     deletar(salCham - 1);
     document.body.style="overflow: auto;";
     let exibirJanela = document.getElementById("containerChamar")
