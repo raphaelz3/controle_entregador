@@ -28,7 +28,7 @@
 <div>
     <div id="containerLeft">
         <div id="listaDisponiveis">
-            <h3>Funcionarios Disponiveis:</h3>
+            <h3>Funcionarios Disponíveis:</h3>
 
             <table >
                 <thead>
@@ -45,7 +45,7 @@
 
                 <tfoot>
                     <tr>
-                        <th colspan="4"><button class="excluir" onclick="limparFila()">Limpar Fila</button></th>
+                        <th colspan="4"><button class="excluir" onclick="limparFilaEspera(1)">Limpar Fila</button></th>
                     </tr>
                 </tfoot>
 
@@ -66,14 +66,18 @@
                 </tr>
             </thead>
             <tbody id="filaServico">
-
             </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="4"><button class="excluir" onclick="limparFilaEspera(2)">Limpar Fila</button></th>
+                </tr>
+            </tfoot>
         </table>
 
     </div>
 </div>
 
     <script src="./scripts/menu.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>
